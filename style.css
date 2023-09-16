@@ -107,7 +107,6 @@ img{
     display: none;
 }
 /* Media queries for responsive design */
-
 /* Adjust styles for screens with a maximum width of 768px */
 @media (max-width: 768px) {
     nav {
