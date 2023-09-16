@@ -8,7 +8,7 @@
 }
 
 nav {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     padding: 12px 3px;
     display: flex;
@@ -35,12 +35,24 @@ ul > li {
 }
 
 ul > li:hover{
-    color: white;
+    color: rgb(255, 0, 55);
+    transition: background-color 0.5s, color 0.5s; /* Add a smooth transition */
 
 }
 
+/* Style the icons */
+ul > li > i {
+    display: none; /* Initially hide the icons */
+    margin-right: 5px; /* Add some spacing between the icon and text */
+}
+
+/* Show the icons when hovering over the list items */
+ul > li:hover > i {
+    display: inline; /* Show the icons on hover */
+}
+
 table, td, tr{
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     border-collapse: collapse;
     padding: 5px 13px;
 }
@@ -65,6 +77,14 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
+/* Add hover effect for submit buttons */
+.btn:hover {
+    background-color: rgb(6, 98, 246);
+    color: rgb(238, 10, 10);
+    transition: background-color 0.5s, color 0.5s; /* Add a smooth transition */
+}
+
+
 .btnsm{ 
     padding: 8px 17px;
     background: black;
@@ -85,4 +105,33 @@ img{
 
 #alert{
     display: none;
+}
+/* Media queries for responsive design */
+
+/* Adjust styles for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 0;
+    }
+    
+    .logo {
+        margin: 0 10px;
+        font-size: 20px;
+    }
+    
+    ul > li {
+        margin: 0 10px;
+    }
+    
+    .btn, .btnsm {
+        padding: 6px 12px;
+        font-weight: 700;
+        margin: 15px 0;
+    }
+    
+    img {
+        width: 12px;
+        height: 10px;
+        bottom: 5px;
+    }
 }
